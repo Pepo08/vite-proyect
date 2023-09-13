@@ -1,18 +1,22 @@
+import { useEffect } from "react";
 import "./App.css";
-import Card from './components/Card'
-import Contador from "./components/Contador";
 import Navbar from "./components/Navbar/Navbar.jsx";
 
-// App.jsx
-// Componente es una Funcion que tambien su nombre inicia con Mayuscula
-// Solamente podemos retornar una etiqueta html
 
 
-function App(props) {
-    console.log(props)
+function App() {
+
+    const requestJsonPlaceHolder = () => fetch("")
+
+    useEffect(() =>{
+        requestJsonPlaceHolder()
+        .then(res => res.json())
+        .then(res =>{
+            setProductos(res);
+        })
+    })
     return (
         <main>
-            <Card title={"hollaaaaa"} />
             <Navbar/>
         </main>
     );

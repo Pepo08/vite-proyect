@@ -1,0 +1,17 @@
+.NavBar{
+    display: flex;
+    margin-left: 0;
+}
+.list-first{
+    margin-left: 70px;
+}
+.list{
+    margin-left: 30px;
+}
+.casa{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+}
