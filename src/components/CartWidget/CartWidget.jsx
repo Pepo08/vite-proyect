@@ -2,7 +2,7 @@ import Contador from "../Contador/Contador";
 import "./styles.css"
 import carrito from "./carrito-compras.png"
 
-const CartWidge = () => {
+const CartWidget = () => {
 
     return(
         <div className="carro">
@@ -12,4 +12,4 @@ const CartWidge = () => {
     );
 }
 
-export default CartWidge;
+export default CartWidget;

@@ -1,23 +1,20 @@
-import { useEffect } from "react";
 import "./App.css";
-import Navbar from "./components/Navbar/Navbar.jsx";
+import Navegacion from "./routes/Navegacion";
 
 
 
 function App() {
-
-    const requestJsonPlaceHolder = () => fetch("")
-
-    useEffect(() =>{
-        requestJsonPlaceHolder()
-        .then(res => res.json())
-        .then(res =>{
-            setProductos(res);
-        })
-    })
+//    const requestJsonPlaceHolder = () => fetch("")
+//    useEffect(() =>{
+//        requestJsonPlaceHolder()
+//        .then(res => res.json())
+//        .then(res =>{
+//            setProductos(res);
+//        })
+//    })
     return (
         <main>
-            <Navbar/>
+            <Navegacion/>
         </main>
     );
 }
