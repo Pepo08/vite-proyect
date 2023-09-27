@@ -22,7 +22,7 @@ const Home = () => {
         {
             cargando ? <p>Cargando...</p>
             : productos.map(prod => (
-                <Item id={prod.id} nombre={prod.nombre} descripcion={prod.descripcion}/>
+                <Item id={prod.id} title={prod.title} price={prod.price} description={prod.description} image={prod.image}/>
             ))
         }
         </ItemList>
