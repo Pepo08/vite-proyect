@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@mui/material": "^5.14.11",
+    "@mui/material": "^5.14.13",
     "@mui/styled-engine-sc": "^5.14.11",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",

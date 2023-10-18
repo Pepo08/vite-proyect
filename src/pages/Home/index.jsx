@@ -15,16 +15,14 @@ const Home = () => {
         setCargando(false)
     }, 1500);
     }, []);
-
+    
     return (
     <Layout>
         <ItemList>
-        {
-            cargando ? <p>Cargando...</p>
-            : productos.map(prod => (
+            {cargando}
+            {!cargando && productos.map(prod => (
                 <Item id={prod.id} title={prod.title} price={prod.price} description={prod.description} image={prod.image}/>
-            ))
-        }
+            ))}
         </ItemList>
     </Layout>
     );
