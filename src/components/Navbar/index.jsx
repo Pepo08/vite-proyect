@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import CartWidget from "../CartWidget/CartWidget";
-import ItemListContainer from "../ItemListContainer/ItemListContainer";
+import ItemListContainer from "../ItemListContainer";
 import "./styles.css";
 import { Link } from "react-router-dom";
 
