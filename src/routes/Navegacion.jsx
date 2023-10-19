@@ -1,7 +1,7 @@
 import {createBrowserRouter , RouterProvider} from "react-router-dom"
 import Home from "../pages/Home"
 import ItemDetailContainer from "../pages/ItemDetailContainer"
-import Checkout from "../pages/Checkout"
+import ItemListContainer from "../components/ItemListContainer"
 
 
 const Routes = createBrowserRouter ([
