@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { productos } from "../../productos";
-import Layout from "../../components/Layout/Layout";
+import Layout from "../Layout/Layout";
 
 const ItemDetail = () => {
     const { idProduct } = useParams();

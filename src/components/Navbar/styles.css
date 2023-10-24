@@ -1,6 +1,26 @@
 .navbar{
     font-size: 23px;
-    margin-left: 0px;
+    margin: 0;
+    padding: 0;
     flex-direction: row;
-    background-color: red;
+}
+.home{
+    color: black;
+    text-decoration: underline white;
+    display: inline-block;
+}
+.nav-categorys{
+    width: 70%;
+}
+.nav-links{
+    text-decoration: none;
+    color:black;
+    transition: 0.5s;
+}
+.nav-links:hover{
+    color: white;
+    background-color: blueviolet;
+    border-radius: 5px;
+    padding: 5px;
+    transition: 0.5s;
 }

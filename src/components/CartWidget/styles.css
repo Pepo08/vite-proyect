@@ -1,10 +1,6 @@
-.carrito{
-    display: flex;
-    height:75px;
-    width: 75px;
-    margin-left: 15%;
-    position: absolute;
+.cart{
+    margin-right: 20px;
 }
-.list{
-    color: white;
+.ftCart{
+height: 50px;
 }

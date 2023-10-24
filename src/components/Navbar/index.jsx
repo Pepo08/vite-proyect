@@ -1,24 +1,24 @@
 import { useContext } from "react";
 import CartWidget from "../CartWidget/CartWidget";
-import ItemListContainer from "../ItemListContainer";
 import "./styles.css";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const Navbar = () => {
 
-const navegacion = ['Home', 'Tienda', 'Contacto', 'Ayuda']
-const handleConsole = () => console.log('Aca estoy')
-
 return (
-    <div className="navbar">
-      {/* Utilizamos el componente Link de react-router-dom */}
-    <h1>LOGO</h1>
-    <ItemListContainer router={navegacion} handleConsole={handleConsole}/>
-    <Link to={'/cart'}>
-    <CartWidget/>
-    </Link>
-    </div>
-    );
+    <nav className="navbar">
+      <Link to="/">
+        <h2 className="home">Home</h2>
+      </Link>
+      <div className="nav-categorys">
+        <NavLink className="nav-links" to={"/category/ropa-hombre"}>Ropa Hombre</NavLink>
+        <NavLink className="nav-links"to={"/category/ropa-mujer"}>Ropa Mujer</NavLink>
+        <NavLink className="nav-links" to={"/category/electronicos"}>Electronicos</NavLink>
+        <NavLink className="nav-links" to={"/category/joyeria"}>Joyeria</NavLink>
+      </div>
+      <CartWidget/>
+    </nav>
+  );
 };
 
 export default Navbar;

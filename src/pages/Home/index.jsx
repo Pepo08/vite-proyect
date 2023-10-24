@@ -19,7 +19,7 @@ const Home = () => {
     return (
     <Layout>
         <ItemList>
-            {cargando}
+            {cargando && 'cargando...'}
             {!cargando && productos.map(prod => (
                 <Item id={prod.id} title={prod.title} price={prod.price} description={prod.description} image={prod.image}/>
             ))}

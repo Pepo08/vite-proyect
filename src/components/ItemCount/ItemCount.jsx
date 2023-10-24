@@ -2,7 +2,7 @@ import "./style.css"
 import { useState } from "react"
 
 const ItemCount = () =>{
-    const [numero, setNumero] = useSteate(initial)
+    const [numero, setNumero] = useState(initial)
 
     const sumar = () =>{
         if(numero < stock){

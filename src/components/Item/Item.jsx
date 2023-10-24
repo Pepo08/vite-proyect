@@ -1,5 +1,6 @@
 
 import { Link } from "react-router-dom";
+import "./style.css"
 
 const Item = ({id, title, price, description, image}) =>{
 
@@ -13,12 +14,12 @@ const Item = ({id, title, price, description, image}) =>{
         console.log(id, nombre, precio , descripcion)
     }
     return(
-        <div>
-            <img style={{height: "200px"}} src={image} alt="" />
-            <h1>{title}</h1>
-            <p>{price}</p>
-            <p>{description}</p>
-            <Link to={`/producto/${id}`}>Ver producto</Link>
+        <div className="productos">
+            <img src={image} className="img" alt="" />
+            <h1 className="titulo">{title}</h1>
+            <p className="precio">{price}</p>
+            <p className="descripcion">{description}</p>
+            <Link to={`/producto/${id}`} className="ver">Ver producto</Link>
         </div>
     )
 }
