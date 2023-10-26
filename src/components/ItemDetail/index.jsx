@@ -23,13 +23,10 @@ const ItemDetail = () => {
     return (
     <Layout>
         {isLoading ? (
-        <p>Cargando . .</p>
+        <p>Cargando...</p>
         ) : (
         <>
             <h1>{productos.nombre}</h1><br/>
-            <h3>
-            ir a <Link to={"/"}>Home</Link>
-            </h3>
         </>
         )}
     </Layout>

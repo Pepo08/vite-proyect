@@ -1,21 +1,21 @@
 import "./style.css"
-import {useState, useEffect} from "react"
+import {useParams, useEffect, useState} from "react"
 import { getProductById } from "../../asyncMock"
 import ItemDetail from "../ItemDetail"
-import ItemListContainer from "../ItemListContainer"
 
 const ItemDetailContainer = () => {
-    const [prodcuts, setProducts] = useEffect(null)
+    const [prodcuts, setProducts] = useState(null)
+    const {itemId} = useParams()
 
     useEffect(() =>{
-        getProductById("1")
+        getProductById(itemId)
         .then(response =>{
             setProducts(response)
         })
         .catch(error => {
             console.error(error)
         })
-    })
+    }, [itemId])
     return(
         <div>
             <ItemDetail {...prodcuts}/>

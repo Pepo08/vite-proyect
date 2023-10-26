@@ -1,14 +1,28 @@
 import "./style.css";
 import { Button } from '@mui/material';
+import { useState, useEffect} from "react";
+import { useParams } from "react-router-dom";
+import { getProducts, getProductByCategory } from "../../asyncMock";
+import ItemList from "../ItemList/ItemList";
 
-const ItemListContainer = ({router, handleConsole}) => {
+const ItemListContainer = () => {
+    const [prodcuts, setProducts] = useState([])
+    const categoryId = useParams()
 
+    useEffect(() =>{
+        const asyncFunc = categoryId ? getProductByCategory : getProducts
+
+        asyncFunc(categoryId)
+        .then((response) =>{
+            setProducts(response)
+        })
+        .catch(error =>{
+            console.log(error)
+        })
+    }, [categoryId])
     return (
     <div className="container">
-        {router.map((ruta) => (
-        <Button  className="boton-nav" onClick={() => console.log("s")} key={ruta}>{ruta}</Button>
-        ))}
-        <Button variant="outlined" onClick={()=> handleConsole()}> Consologiame </Button>
+        <ItemList productos = {prodcuts}/>
     </div>
     );
 };

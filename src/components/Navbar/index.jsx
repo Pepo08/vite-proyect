@@ -11,10 +11,10 @@ return (
         <h2 className="home">Home</h2>
       </Link>
       <div className="nav-categorys">
-        <NavLink className="nav-links" to={"/category/ropa-hombre"}>Ropa Hombre</NavLink>
-        <NavLink className="nav-links"to={"/category/ropa-mujer"}>Ropa Mujer</NavLink>
-        <NavLink className="nav-links" to={"/category/electronicos"}>Electronicos</NavLink>
-        <NavLink className="nav-links" to={"/category/joyeria"}>Joyeria</NavLink>
+        <NavLink className="nav-links" to={"/category/mens-clothing"}>Ropa Hombre</NavLink>
+        <NavLink className="nav-links"to={"/category/womens-clothing"}>Ropa Mujer</NavLink>
+        <NavLink className="nav-links" to={"/category/electronics"}>Electronicos</NavLink>
+        <NavLink className="nav-links" to={"/category/jewelery"}>Joyeria</NavLink>
       </div>
       <CartWidget/>
     </nav>
