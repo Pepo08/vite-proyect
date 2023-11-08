@@ -1,5 +1,4 @@
 import "./style.css";
-import { Button } from '@mui/material';
 import { useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 import { getProducts, getProductByCategory } from "../../asyncMock";
@@ -7,7 +6,7 @@ import ItemList from "../ItemList/ItemList";
 
 const ItemListContainer = () => {
     const [prodcuts, setProducts] = useState([])
-    const categoryId = useParams()
+    const { categoryId } = useParams()
 
     useEffect(() =>{
         const asyncFunc = categoryId ? getProductByCategory : getProducts

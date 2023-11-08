@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { productos } from "../../productos";
 import Layout from "../Layout/Layout";
+import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = () => {
     const { idProduct } = useParams();
@@ -27,6 +28,8 @@ const ItemDetail = () => {
         ) : (
         <>
             <h1>{productos.nombre}</h1><br/>
+            <h2>¿Cuantos quieres llevar?</h2>
+            <ItemCount/>
         </>
         )}
     </Layout>

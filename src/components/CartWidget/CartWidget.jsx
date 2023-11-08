@@ -1,16 +1,14 @@
-import { Badge } from '@mui/material'
-import { useContext } from 'react'
-import { CartCtx } from '../../context/CartContext'
+import { Link } from 'react-router-dom';
 import cart from './carrito-compras.png'
 import "./styles.css"
 
 const CartWidget = () => {
 
     return(
-        <div className='cart'>
+        <Link to={"../../pages/Cart/Cart"} className='cart'>
             <img src={cart} alt="" className='ftCart' />
-            0
-        </div>
+            <span className='nro'>0</span>
+        </Link>
     );
 }
 
